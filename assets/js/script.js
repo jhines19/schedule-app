@@ -2,17 +2,28 @@
 var todaysDate = moment();
 $("#today").text(todaysDate.format("dddd, MMMM Do YYYY"));
 
-//Activity 04 in Unit 06: example of dynamically creating list without having to type a bunch of times in html and 03 is example of table
-//also Activity 09
-
-
-//Getting some info rendered onto a seciton of the screen, Activity 10
-//could style via jquery as well if wanted to
-
 
 //click and type into cell
 //.on , event delegation, etc.
+//on click, insert text
+//on click, save
 
+$('.col-9').each(function() {
+    var default_value = this.value;
+    $(this).focus(function() {
+        if(this.value == default_value) {
+            this.value = '';
+        }
+    });
+    $(this).blur(function() {
+        if(this.value == '') {
+            this.value = default_value;
+        }
+    });
+});
+function example_append() {
+    $('#tbl').append($('#description-field').val());
+}
 
 //save your entry :activity 06 in unit 05
 //(practice saving something in localStorage. Havent even done that yet.)

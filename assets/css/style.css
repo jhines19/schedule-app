@@ -1,0 +1,8 @@
+header {
+    text-align: center;
+    margin-top: 3rem auto;
+    padding-top: 3rem;
+    border-bottom:solid;
+    border-color:rgba(97, 31, 204, 0.867);
+    border-width: 8px;
+}
